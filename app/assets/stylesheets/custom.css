@@ -1,0 +1,228 @@
+/* ========================================================================== */
+
+/*
+    Note:
+        Flexbox
+            To learn more about Flexbox terminology, please refer to: https://css-tricks.com/snippets/css/a-guide-to-flexbox/.
+*/
+
+/* ========================================================================== */
+
+/* Fix position and set minimum size of the whole About Me page. */
+
+#mePage
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* ========================================================================== */
+
+/* Flexbox Setting */
+
+/* Flex Box Setting*/
+
+/* Used to control the vertical position of the whole About Me page. */
+#mePage
+{
+    display: flex;                      /* Define flex container as block. */
+    flex-flow: column-nowrap;           /* flex-direction || flex-wrap */
+    justify-content: center;            /* Align items WRT main axis. */
+    align-items: center;                /* Align items WRT cross axis's line. */
+    align-content: stretch;             /* Align item lines WRT cross axis. */
+}
+
+/* Used to control layout of About Me page items. */
+#meBody, #ppBox, #bioBox
+{
+    display: inline-flex;               /* Define flex container as block. */
+    flex-flow: row wrap;                /* flex-direction || flex-wrap */
+    justify-content: center;            /* Align items WRT main axis. */
+    align-items: stretch;               /* Align items WRT cross axis's line. */
+    align-content: stretch;             /* Align item lines WRT cross axis. */
+}
+
+/* ========================================================================== */
+
+/* Flex Item Setting */
+
+/* Flex Item Placement */
+#meBody                                 { flex: 0 1 auto; }
+
+#pageTitle                              { flex: 0 1 100%; }
+
+@media all and (max-width: 670px)
+{
+    #ppBox                              { flex: 0 1 100%; }
+}
+
+@media all and (min-width: 671px)
+{
+    #ppBox                              { flex: 0 1 auto; }
+
+}
+
+#sideTitle                              { flex: 0 1 1%; }
+#bioBox                                 { flex: 2000 1 auto; }
+
+#bioBox *                               { flex: 1 1 auto; }
+
+/* ========================================================================== */
+
+/* Background */
+
+@keyframes rainbowBackground
+{
+    14.2857% {background-color: blue; }
+    28.5714% {background-color: green; }
+    42.8571% {background-color: yellow; }
+    57.1429% {background-color: orange; }
+    72.4286% {background-color: red; }
+    85.7143% {background-color: violet; }
+    100.0000% {background-color: indigo; }
+}
+
+body
+{
+    background-color: blue;
+    animation: rainbowBackground 21s linear infinite alternate;
+    /* name duration function delay i-count directon */
+}
+
+#pageTitle                              { background: darkgray; }
+#sideTitle                              { background: silver; }
+
+#ppBox                                  { background: gray; }
+#bioBox                                 { background: #3399ff; }
+#bioBox .bioList                        { background: #cce5ff; }
+
+/* Border Color */
+
+@keyframes rainbowBorder
+{
+    14.2857% { border-color: blue; }
+    28.5714% { border-color: green; }
+    42.8571% { border-color: yellow; }
+    57.1429% { border-color: orange; }
+    72.4286% { border-color: red; }
+    85.7143% { border-color: violet; }
+    100.0000% { border-color: indigo; }
+}
+
+.bioList
+{
+    border-color: blue;
+    animation: rainbowBorder 21s linear infinite alternate;
+    /* name duration function delay i-count directon */
+}
+
+/* Border Style */
+.bioList
+{
+    border-style: double solid double solid;
+}
+
+/* Border Width */
+.bioList                                { border-width: 3px 10px 3px 10px; }
+
+/* Border Radius */
+
+.bioList                                { border-radius: 10px; }
+
+/* Color */
+
+@keyframes rainbowText
+{
+    14.2857% { color: blue; }
+    28.5714% { color: green; }
+    42.8571% { color: yellow; }
+    57.1429% { color: orange; }
+    72.4286% { color: red; }
+    85.7143% { color: violet; }
+    100.0000% { color: indigo; }
+}
+
+#pageTitle, #sideTitle
+{
+    color: blue;
+    animation: rainbowText 21s linear infinite alternate;
+}
+
+h4, h5, h6                              { color: white; }
+
+/* Font Family */
+*                                       { font-family: "Dekko", "STIXMath"; }
+h1, h2, h3, h4, h5, h6                  { font-family: "Stalemate", cursive; }
+
+/* Font Size */
+*                                       { font-size: 12px; }
+h1                                      { font-size: 24px; }
+h2                                      { font-size: 22px; }
+h3                                      { font-size: 20px; }
+h4                                      { font-size: 18px; }
+h5                                      { font-size: 16px; }
+h6                                      { font-size: 14px; }
+
+/* Font Weight */
+h1, h2, h3, h4, h5, h6                  { font-weight: bold; }
+
+/* Letter Spacing */
+*                                       { letter-spacing: 0; }
+
+/* Line Height */
+*                                       { line-height: 1; }
+
+/* Margin */
+*                                       { margin: 0; }
+li                                      { margin: 3px 0px 3px 0px; }
+
+/* Padding */
+*                                       { padding: 5px; }
+
+#pageTitle, #ppbox,
+#sideTitle *, #bioBox                   { padding: 0; }
+ol                                      { padding: 5px 5px 5px 25px; }
+li                                      { padding: 0 0 0 5px; }
+
+/* Text Align */
+*                                       { text-align: center; }
+
+/* Text Indent */
+*                                       { text-indent: 0; }
+
+/* Text Shadow */
+h1, h2, h3                              { text-shadow: 5px 5px 5px white; }
+#sideTitle *                            { text-shadow: 1px 1px 1px black; }
+h4, h5, h6                              { text-shadow: 1px 1px 1px blue; }
+
+/* Word Spacing */
+*                                       { word-spacing: 0; }
+
+/* Animation */
+
+@keyframes rotate
+{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(359deg); }
+}
+
+#mePage
+{
+    animation: rotate 0.01s ease-in-out 20;
+}
+
+/* ========================================================================== */
+
+/*
+    To Do:
+        Optimize animation to reduce eye strain.
+        Update page to an alert when screen is resized is too small.
+        Automate similarly repeating animation codes.
+        Somehow, scaling animation does not work... Try again later.
+        Also, add translation animation.
+*/
+
+/* ========================================================================== */

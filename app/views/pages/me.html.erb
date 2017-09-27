@@ -1,0 +1,71 @@
+<!-- ======================================================================= -->
+
+<!--
+    File Name: me.html.erb
+    Name: Penguinlay
+    Assignment: HW2
+    Course: CS 198 - Ruby on Rails - Fall 2017
+    Start: 2017092602
+    End: 2017092602
+//-->
+
+<!-- ======================================================================= -->
+
+<div id=mePage>
+    <div id=meBody>
+        <div id="pageTitle">
+            <h1><%= @profile.title %></h1>
+        </div>
+
+        <div id="ppBox">
+            <%= image_tag("pp.png", size: "250x256") %>
+        </div>
+
+        <div id="sideTitle">
+            <p>P<br>E<br>N<br>G<br>U<br>I<br>N<br>L<br>A<br>Y</p>
+            <p><br><br></p>
+            <p>P<br>E<br>N<br>G<br>U<br>I<br>N<br>L<br>A<br>Y</p>
+        </div>
+
+        <div id="bioBox">
+            <ol>
+                <li>
+                    <h5><%= @profile.aboutName %></h5>
+                    <p class="bioList">
+                        <%= @profile.name %>
+                    </p>
+                </li>
+
+                <li>
+                    <h5><%= @profile.aboutFrom %></h5>
+                    <p class="bioList">
+                        <%= @profile.from %>
+                    </p>
+                </li>
+
+                <li>
+                    <h5><%= @profile.aboutYear %></h5>
+                    <p class="bioList">
+                        <%= @profile.year %>
+                    </p>
+                </li>
+
+                <li>
+                    <h5><%= @profile.aboutFact %></h5>
+                    <p class="bioList">
+                        <%= @profile.fact %>
+                    </p>
+                </li>
+
+                <li>
+                    <h5><%= @profile.aboutMotv %></h5>
+                    <p class="bioList">
+                        <%= @profile.motv %>
+                    </p>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!-- ======================================================================= -->
