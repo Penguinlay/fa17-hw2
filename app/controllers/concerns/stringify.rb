@@ -1,5 +1,16 @@
 # ============================================================================ #
 
+=begin
+    File Name: Stringify.rb
+    Edited By: Penguinlay
+    Assignment: HW2
+    Course: CS 198 - Ruby on Rails - Fall 2017
+    Start: 2017092602
+    End: 2017092703
+=end
+
+# ============================================================================ #
+
 class Stringify
     attr_accessor :name, :adjective
 
